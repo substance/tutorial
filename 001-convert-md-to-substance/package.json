@@ -1,0 +1,15 @@
+{
+  "name": "substance-tutorial",
+  "private": true,
+  "dependencies": {
+    "substance-article": "git+https://github.com/substance/article.git#0.1.x",
+    "substance-document": "git+https://github.com/substance/document.git#0.5.x",
+    "substance-surface": "git+https://github.com/substance/surface.git#0.3.x",
+    "underscore": "1.5.x"
+  },
+  "version": "0.1.0",
+  "engines": {
+    "node": ">=0.8.x",
+    "npm": ">=1.1.x"
+  }
+}

@@ -1,4 +1,7 @@
-tutorial
-========
+# Lesson 1
 
-Get your hands dirty in five lessons.
+Convert MD to Substance
+
+# Lesson 3
+
+Use Phantom JS in conjunction with Substance Surface.
