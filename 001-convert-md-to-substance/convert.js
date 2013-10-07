@@ -1,15 +1,25 @@
-var Converter = require("substance-converter");
-var ConverterServer = require("substance-converter/src/server");
 var fs = require('fs');
-var helloDoc = fs.readFileSync(__dirname + "/hello-world.md", "utf8");
-var converter = new ConverterServer();
+var Converter = require("substance-converter");
 
-converter.convert(helloDoc, 'markdown', 'substance', function(err, doc) {
+// Parse command line arguments
+// -----------
+
+var inputFile = process.argv[2];
+var outputFile = process.argv[3];
+
+// Read markdown input
+// -----------
+
+var inputDoc = fs.readFileSync(inputFile, "utf8");
+
+// Do the converstion
+// -----------
+
+var converter = new Converter();
+
+converter.convert(inputDoc, 'markdown', 'substance', function(err, doc) {
   if (err) {
-    console.error(err);
-    // return res.send(500, err);
+    return console.error(err);
   }
-
-  fs.writeFileSync(__dirname + "/hello-world.json", JSON.stringify(doc, null, '  '));
-  // res.send(output);
+  fs.writeFileSync(outputFile, JSON.stringify(doc, null, '  '));
 });
