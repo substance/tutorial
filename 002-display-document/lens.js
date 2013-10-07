@@ -17600,6 +17600,7 @@ var html = util.html;
 var View = require("substance-application").View;
 var $$ = require("substance-application").$$;
 
+
 // Substance.View Constructor
 // ========
 // 
@@ -17615,6 +17616,7 @@ var SubstanceView = function(controller) {
   
   this.listenTo(this.controller, 'state-changed', this.onStateChanged);
   this.listenTo(this.controller, 'loading:started', this.displayLoadingIndicator);
+
 };
 
 SubstanceView.Prototype = function() {
@@ -17680,10 +17682,10 @@ SubstanceView.Prototype = function() {
     // About Substance
     // ------------
 
-    this.el.appendChild($$('a.about-substance', {
-      href: "http://substance.io",
-      html: 'Substance'
-    }));
+    // this.el.appendChild($$('a.about-substance', {
+    //   href: "http://substance.io",
+    //   html: 'Substance 0.5.0'
+    // }));
 
     // Loading indicator
     // ------------
@@ -17714,7 +17716,10 @@ SubstanceView.prototype = new SubstanceView.Prototype();
 
 module.exports = SubstanceView;
 },{"substance-application":7,"substance-util":103,"underscore":108}],112:[function(require,module,exports){
-// nothing to see here... no file methods for the browser
+
+// not implemented
+// The reason for having an empty file and not throwing is to allow
+// untraditional implementation of this module.
 
 },{}]},{},[1])
 ;

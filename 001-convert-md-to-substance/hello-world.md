@@ -1,7 +1,0 @@
-# Intro
-
-# Main
-
-hello
-
-# Outro

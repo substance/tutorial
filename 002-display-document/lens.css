@@ -160,17 +160,17 @@ Outline
 
 
 
-.content-node.cover {
+.substance-article .content-node.cover {
   background: #5c6570;
   margin-bottom: 50px;
   color: white;
 }
 
-.content-node.cover .content {
+.substance-article .content-node.cover .content {
   background: none;
 }
 
-.content-node.cover .title {
+.substance-article .content-node.cover .title {
   font-family: 'Avenir LT W01 85 Heavy', 'Montserrat', 'Source Sans Pro';
   line-height: 1.3em;
   margin-bottom: 50px;
@@ -178,12 +178,12 @@ Outline
   color: rgba(255,255,255, 0.9);
 }
 
-.content-node.cover .content .authors {
+.substance-article .content-node.cover .content .authors {
   color: rgba(255,255,255, 0.7);
   overflow: auto;
 }
 
-.content-node.cover .authors .text {
+.substance-article .content-node.cover .authors .text {
   float: left;
   padding: 0px;
   margin: 0px;
@@ -201,6 +201,20 @@ Outline
   white-space: pre-wrap;
   white-space: -moz-pre-wrap;
   white-space: -pre-wrap;
+}
+/* Figure Node
+-------------------------------------------------------------------------------*/
+
+.substance-article .content-node.figure { 
+}
+
+.substance-article .content-node.figure div.image-wrapper {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.substance-article .content-node.figure div .image-wrapper img {
+  width: 100%;
 }
 /* Paragraph Node
 -------------------------------------------------------------------------------*/
@@ -327,7 +341,6 @@ Outline
 }
 .document .content-node.formula {
   padding: 30px 60px;
-  /*padding-right: 60px;*/
   padding-left: 100px;
   min-height: 80px;
   text-align: center;
@@ -1090,6 +1103,13 @@ span.annotation.formula_reference, span.publication_reference {
 }
 
 
+/* Hide focus toggles for cover
+----------------------------------------------------------------------- */
+
+.surface.content .nodes > .content-node.cover .focus {
+  display: none;
+}
+
 /* For the resources panel
 ----------------------------------------------------------------------- */
 
@@ -1198,7 +1218,7 @@ General Layout
   z-index: 2000;
 }
 
-#container .about-substance {
+#container .about-lens {
   position: absolute;
   left: 25px;
   bottom: 25px;
