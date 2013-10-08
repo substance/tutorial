@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:mml="http://www.w3.org/1998/Math/MathML">
+  <head>
+    <title>Substance Reader</title>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='styles/font-awesome.css' rel='stylesheet' type='text/css'/>
+    <link href='article.css' rel='stylesheet' type='text/css'/>
+
+    <script src="lib/jquery-2.0.3.min.js"></script>
+
+    <script src='lorem_ipsum.js'></script>
+    <script src='substance.js'></script>
+
+    <script>
+
+      // Create a new Substance Article
+      // --------------
+
+      var doc = Substance.Article.fromSnapshot(loremIpsumDoc);
+
+      // Controller gives you a safe interface to the document
+      // --------------
+
+      var docCtrl = new Substance.Document.Controller(doc, {view: "content"});
+      
+      // Surface can render your article.
+      // --------------
+
+      var surface = new Substance.Surface(docCtrl, {
+        editable: false
+      });
+
+      // Wait until DOM ready
+      // ----------
+
+      $(function() {
+        // Render and display
+        $('body').append(surface.render().el);
+      });
+
+    </script>
+  </head>
+  <body>
+    
+  </body>
+</html>
