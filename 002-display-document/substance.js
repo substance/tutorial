@@ -17442,7 +17442,6 @@ var Substance = function(config) {
 Substance.Reader = require("lens-reader");
 Substance.Outline = require("lens-outline");
 
-
 Substance.Prototype = function() {
 
   // Start listening to routes
@@ -17454,6 +17453,19 @@ Substance.Prototype = function() {
   }
 };
 
+// Expose API
+// ------------
+
+Substance.Document = require("substance-document");
+Substance.Article = require("substance-article");
+Substance.Data = require("substance-data");
+Substance.Chronicle = require("substance-chronicle");
+Substance.Commander = require("substance-commander");
+Substance.Application = require("substance-application");
+Substance.Surface = require("substance-surface");
+Substance.Operator = require("substance-operator");
+Substance.RegExp = require("substance-regexp");
+
 
 Substance.Prototype.prototype = Application.prototype;
 Substance.prototype = new Substance.Prototype();
@@ -17462,7 +17474,7 @@ Substance.prototype.constructor = Substance;
 
 module.exports = Substance;
 
-},{"./substance_controller":110,"./substance_view":111,"lens-outline":2,"lens-reader":4,"substance-application":7,"substance-util":103,"underscore":108}],110:[function(require,module,exports){
+},{"./substance_controller":110,"./substance_view":111,"lens-outline":2,"lens-reader":4,"substance-application":7,"substance-article":13,"substance-chronicle":17,"substance-commander":25,"substance-data":29,"substance-document":36,"substance-operator":90,"substance-regexp":97,"substance-surface":99,"substance-util":103,"underscore":108}],110:[function(require,module,exports){
 "use strict";
 
 var _ = require("underscore");
@@ -17716,10 +17728,7 @@ SubstanceView.prototype = new SubstanceView.Prototype();
 
 module.exports = SubstanceView;
 },{"substance-application":7,"substance-util":103,"underscore":108}],112:[function(require,module,exports){
-
-// not implemented
-// The reason for having an empty file and not throwing is to allow
-// untraditional implementation of this module.
+// nothing to see here... no file methods for the browser
 
 },{}]},{},[1])
 ;

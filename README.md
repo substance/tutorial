@@ -1,7 +1,3 @@
-# Lesson 1
+Read the tutorial here:
 
-Convert MD to Substance
-
-# Lesson 3
-
-Use Phantom JS in conjunction with Substance Surface.
+http://substance.io/#substance/tutorial
