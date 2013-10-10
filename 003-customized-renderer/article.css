@@ -1,0 +1,28 @@
+.surface.content {
+  width: 700px;
+  padding: 50px;
+  color: #444;
+  font-size: 18px;
+  font-family: Helvetica, Arial;
+}
+
+.surface .content a {
+  color: #1B6685;
+}
+
+.surface.content .content-node.text, .surface.content .content-node.paragraph {
+  padding: 10px 0;
+}
+
+.surface.content .content-node.heading {
+  font-weight: bold;
+  color: #0089D3;
+}
+
+.surface.content .content-node.heading.level-1 {
+  font-size: 25px;
+}
+
+.surface.content .content-node.heading.level-2 {
+  font-size: 18px;
+}

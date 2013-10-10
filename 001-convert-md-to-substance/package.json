@@ -1,0 +1,11 @@
+{
+  "name"          : "substance-tutorial-001",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/substance/tutorial"
+  },
+  "dependencies": {
+    "substance-converter": "0.1.0"
+  },
+  "version": "0.1.0"
+}
