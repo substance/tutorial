@@ -5,7 +5,7 @@
     "url": "https://github.com/substance/tutorial"
   },
   "dependencies": {
-    "substance-converter": "git+https://github.com/substance/converter.git#pandoc_1_12_1"
+    "substance-converter": "0.2.0"
   },
-  "version": "0.1.0"
+  "version": "0.2.0"
 }
